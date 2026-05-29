@@ -84,9 +84,30 @@ button {
   font-weight: 700;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  color: #2c2d30;
+  font-size: 14px;
+  font-weight: 800;
+}
+
 .top-nav a:hover,
 .ghost-link:hover,
-.quick-guides a:hover {
+.quick-guides a:hover,
+.language-switch:hover {
   color: var(--coral-dark);
 }
 
@@ -587,6 +608,12 @@ main {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 12px 28px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
   }
 
   main {

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HeartGift Web - Relationship Reminder and Gift Helper</title>
+    <meta name="description" content="HeartGift Web helps you remember important relationships, birthdays, anniversaries, gift preferences, and warm greeting messages. Data stays in your browser." />
+    <meta property="og:title" content="HeartGift Web" />
+    <meta property="og:description" content="Remember important people and prepare thoughtful gifts before the date arrives." />
+    <meta property="og:image" content="/assets/gift-still-life.png" />
+    <link rel="canonical" href="https://heartgift-web.pages.dev/en/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://heartgift-web.pages.dev/" />
+    <link rel="alternate" hreflang="en" href="https://heartgift-web.pages.dev/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://heartgift-web.pages.dev/" />
+    <link rel="icon" href="/assets/heartgift-mark.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/en/" aria-label="HeartGift home">
+        <img src="/assets/heartgift-mark.svg" alt="" width="42" height="42" />
+        <span>
+          <strong>HeartGift</strong>
+          <small>Gift reminder</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#today">Today</a>
+        <a href="#people">People</a>
+        <a href="#ideas">Ideas</a>
+        <a href="/en/guides/">Gift guides</a>
+      </nav>
+      <div class="header-actions">
+        <a class="language-switch" href="/" hreflang="zh-CN">中文</a>
+        <a class="ghost-link" href="/en/privacy.html">Privacy</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="app-grid" id="today">
+        <aside class="panel people-panel" id="people">
+          <div class="panel-head">
+            <h1>HeartGift</h1>
+            <p>Remember important people and prepare thoughtful gifts before the date arrives.</p>
+          </div>
+          <button class="primary-button full" id="sampleReset" type="button">Restore sample data</button>
+          <div class="mini-tabs" aria-label="Relationship filter">
+            <button class="active" type="button" data-filter="upcoming">Upcoming</button>
+            <button type="button" data-filter="all">All people</button>
+          </div>
+          <div class="relationship-list" id="relationshipList"></div>
+          <form class="relationship-form" id="relationshipForm">
+            <h2>Add a relationship</h2>
+            <label>Name<input name="name" required placeholder="Example: Mom" /></label>
+            <label>Relationship<input name="role" required placeholder="Example: Mother" /></label>
+            <label>Important date<input name="date" required type="date" /></label>
+            <label>Budget
+              <select name="budget">
+                <option value="Low budget">Low budget</option>
+                <option value="Mid-range" selected>Mid-range</option>
+                <option value="Premium">Premium</option>
+              </select>
+            </label>
+            <label>What they like<input name="likes" placeholder="flowers, skincare, walks" /></label>
+            <label>What to avoid<input name="avoid" placeholder="too sweet, too expensive, bulky" /></label>
+            <button class="primary-button full" type="submit">Add relationship</button>
+          </form>
+        </aside>
+
+        <section class="workspace">
+          <article class="hero-card">
+            <div>
+              <p class="soft-label">Upcoming</p>
+              <h2 id="eventTitle">Mom's birthday is coming up</h2>
+              <p class="event-meta" id="eventMeta">5 days away · Jun 3</p>
+              <p class="warm-note" id="eventNote">Plan early so the gift feels thoughtful instead of rushed.</p>
+            </div>
+            <img src="/assets/gift-still-life.png" alt="Gifts, flowers, and a greeting card" />
+          </article>
+
+          <article class="panel" id="ideas">
+            <div class="section-title">
+              <div>
+                <p class="soft-label">Gift ideas</p>
+                <h2>Generate ideas from the relationship and interests</h2>
+              </div>
+              <button class="ghost-button" id="shuffleIdeas" type="button">Refresh</button>
+            </div>
+            <div class="idea-grid" id="ideaGrid"></div>
+          </article>
+
+          <article class="panel blessing-panel">
+            <div class="section-title">
+              <div>
+                <p class="soft-label">Greeting message</p>
+                <h2>Warm and specific beats fancy words</h2>
+              </div>
+              <button class="ghost-button" id="copyBlessing" type="button">Copy</button>
+            </div>
+            <p class="blessing-text" id="blessingText"></p>
+          </article>
+        </section>
+
+        <aside class="side-column">
+          <section class="panel privacy-card">
+            <p class="soft-label">Privacy</p>
+            <h2>Saved locally</h2>
+            <p>Your relationship notes stay in this browser. No contacts upload and no login required.</p>
+            <a href="/en/privacy.html">Read privacy notes</a>
+          </section>
+          <section class="panel quick-guides">
+            <div class="section-title compact">
+              <h2>Quick ideas</h2>
+              <a href="/en/guides/">All</a>
+            </div>
+            <a href="/en/guides/gifts-for-mom-birthday.html">Birthday gifts for mom</a>
+            <a href="/en/guides/gifts-for-girlfriend-birthday.html">Birthday gifts for your girlfriend</a>
+            <a href="/en/guides/anniversary-gift-ideas.html">Anniversary gift ideas</a>
+          </section>
+        </aside>
+      </section>
+
+      <section class="guide-section" aria-labelledby="guide-title">
+        <div class="section-title">
+          <div>
+            <p class="soft-label">Gift guides</p>
+            <h2 id="guide-title">Search traffic starts from real gift questions</h2>
+          </div>
+          <a class="ghost-link" href="/en/guides/">View all articles</a>
+        </div>
+        <div class="guide-card-grid">
+          <a class="guide-card" href="/en/guides/gifts-for-mom-birthday.html">
+            <img src="/assets/gift-still-life.png" alt="" />
+            <strong>Birthday gifts for mom</strong>
+            <span>Useful, warm, and easy to prepare.</span>
+          </a>
+          <a class="guide-card" href="/en/guides/gifts-for-girlfriend-birthday.html">
+            <img src="/assets/gift-still-life.png" alt="" />
+            <strong>Birthday gifts for your girlfriend</strong>
+            <span>Personal ideas that do not feel last minute.</span>
+          </a>
+          <a class="guide-card" href="/en/guides/anniversary-gift-ideas.html">
+            <img src="/assets/gift-still-life.png" alt="" />
+            <strong>Anniversary gift ideas</strong>
+            <span>Turn everyday care into a visible ritual.</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 HeartGift Web</span>
+      <a href="/en/about.html">About</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/guides/">Gift guides</a>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

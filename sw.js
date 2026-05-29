@@ -1,4 +1,4 @@
-const CACHE_NAME = "heartgift-web-v2";
+const CACHE_NAME = "heartgift-web-v4";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -9,6 +9,13 @@ const STATIC_ASSETS = [
   "/assets/gift-still-life.png",
   "/privacy.html",
   "/about.html",
+  "/en/",
+  "/en/about.html",
+  "/en/privacy.html",
+  "/en/guides/",
+  "/en/guides/gifts-for-mom-birthday.html",
+  "/en/guides/gifts-for-girlfriend-birthday.html",
+  "/en/guides/anniversary-gift-ideas.html",
   "/guides/",
   "/guides/mom-birthday-gifts.html",
   "/guides/dad-birthday-gifts.html",
