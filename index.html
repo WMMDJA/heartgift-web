@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>心意提醒 HeartGift Web - 关系提醒与送礼助手</title>
+    <meta name="description" content="心意提醒是一个本地保存的关系提醒与送礼助手，帮你记住生日、纪念日和节日，提前准备礼物与祝福文案。" />
+    <meta property="og:title" content="心意提醒 HeartGift Web" />
+    <meta property="og:description" content="记住重要的人，提前准备礼物和祝福。" />
+    <meta property="og:image" content="/assets/gift-still-life.png" />
+    <link rel="icon" href="/assets/heartgift-mark.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="心意提醒首页">
+        <img src="/assets/heartgift-mark.svg" alt="" width="42" height="42" />
+        <span>
+          <strong>心意提醒</strong>
+          <small>HeartGift Web</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="主导航">
+        <a href="#today">今日</a>
+        <a href="#people">关系</a>
+        <a href="#ideas">灵感</a>
+        <a href="/guides/">送礼指南</a>
+      </nav>
+      <a class="ghost-link" href="/privacy.html">隐私</a>
+    </header>
+
+    <main>
+      <section class="app-grid" id="today">
+        <aside class="panel people-panel" id="people">
+          <div class="panel-head">
+            <h1>心意提醒</h1>
+            <p>帮你记住重要的人，提前准备礼物和祝福。</p>
+          </div>
+          <button class="primary-button full" id="sampleReset" type="button">恢复示例数据</button>
+          <div class="mini-tabs" aria-label="关系筛选">
+            <button class="active" type="button" data-filter="upcoming">即将到来</button>
+            <button type="button" data-filter="all">全部关系</button>
+          </div>
+          <div class="relationship-list" id="relationshipList"></div>
+          <form class="relationship-form" id="relationshipForm">
+            <h2>添加关系</h2>
+            <label>称呼<input name="name" required placeholder="例如：妈妈" /></label>
+            <label>关系<input name="role" required placeholder="例如：母亲" /></label>
+            <label>重要日期<input name="date" required type="date" /></label>
+            <label>预算
+              <select name="budget">
+                <option value="低预算">低预算</option>
+                <option value="中等预算" selected>中等预算</option>
+                <option value="高预算">高预算</option>
+              </select>
+            </label>
+            <label>喜欢什么<input name="likes" placeholder="鲜花、护肤品、散步" /></label>
+            <label>避开什么<input name="avoid" placeholder="太甜、太贵、占地方" /></label>
+            <button class="primary-button full" type="submit">添加关系</button>
+          </form>
+        </aside>
+
+        <section class="workspace">
+          <article class="hero-card">
+            <div>
+              <p class="soft-label">即将到来</p>
+              <h2 id="eventTitle">妈妈的生日快到了</h2>
+              <p class="event-meta" id="eventMeta">5天后 · 5月30日</p>
+              <p class="warm-note" id="eventNote">提前准备更从容，这份心意会让她很感动。</p>
+            </div>
+            <img src="/assets/gift-still-life.png" alt="礼物、鲜花和祝福卡片" />
+          </article>
+
+          <article class="panel" id="ideas">
+            <div class="section-title">
+              <div>
+                <p class="soft-label">送礼建议</p>
+                <h2>按关系和喜好生成灵感</h2>
+              </div>
+              <button class="ghost-button" id="shuffleIdeas" type="button">换一批</button>
+            </div>
+            <div class="idea-grid" id="ideaGrid"></div>
+          </article>
+
+          <article class="panel blessing-panel">
+            <div class="section-title">
+              <div>
+                <p class="soft-label">祝福文案</p>
+                <h2>真诚一点，比华丽更重要</h2>
+              </div>
+              <button class="ghost-button" id="copyBlessing" type="button">复制</button>
+            </div>
+            <p class="blessing-text" id="blessingText"></p>
+          </article>
+        </section>
+
+        <aside class="side-column">
+          <section class="panel privacy-card">
+            <p class="soft-label">隐私与数据</p>
+            <h2>本地保存</h2>
+            <p>关系和备注只存在你的浏览器里，不上传联系人，也不需要登录。</p>
+            <a href="/privacy.html">查看隐私说明</a>
+          </section>
+          <section class="panel quick-guides">
+            <div class="section-title compact">
+              <h2>灵感速递</h2>
+              <a href="/guides/">全部</a>
+            </div>
+            <a href="/guides/mom-birthday-gifts.html">送妈妈生日礼物推荐</a>
+            <a href="/guides/girlfriend-birthday-gifts.html">女朋友生日礼物推荐</a>
+            <a href="/guides/teacher-gifts.html">教师节礼物清单</a>
+            <a href="/guides/first-meet-parents.html">第一次见家长送什么</a>
+          </section>
+        </aside>
+      </section>
+
+      <section class="guide-section" aria-labelledby="guide-title">
+        <div class="section-title">
+          <div>
+            <p class="soft-label">送礼指南</p>
+            <h2 id="guide-title">搜索流量从这些问题开始</h2>
+          </div>
+          <a class="ghost-link" href="/guides/">查看全部文章</a>
+        </div>
+        <div class="guide-card-grid">
+          <a class="guide-card" href="/guides/mom-birthday-gifts.html">
+            <img src="/assets/gift-still-life.png" alt="" />
+            <strong>送妈妈生日礼物推荐</strong>
+            <span>实用、温暖、有陪伴感的礼物清单。</span>
+          </a>
+          <a class="guide-card" href="/guides/anniversary-gifts.html">
+            <img src="/assets/gift-still-life.png" alt="" />
+            <strong>结婚纪念日礼物推荐</strong>
+            <span>把日常照顾变成看得见的仪式感。</span>
+          </a>
+          <a class="guide-card" href="/guides/budget-thoughtful-gifts.html">
+            <img src="/assets/gift-still-life.png" alt="" />
+            <strong>不贵但有心意的礼物推荐</strong>
+            <span>预算有限，也能送得体面真诚。</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 心意提醒 HeartGift Web</span>
+      <a href="/about.html">关于</a>
+      <a href="/privacy.html">隐私</a>
+      <a href="/guides/">送礼指南</a>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="HeartGift">
+  <defs>
+    <linearGradient id="giftGradient" x1="14" y1="12" x2="82" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7a59"/>
+      <stop offset="0.62" stop-color="#ff4f68"/>
+      <stop offset="1" stop-color="#62a56f"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="18" width="72" height="66" rx="16" fill="url(#giftGradient)"/>
+  <path d="M48 18v66M16 42h64" stroke="#fff7f2" stroke-width="8" stroke-linecap="round"/>
+  <path d="M32 18c-9-9-2-20 9-12 5 4 7 12 7 12s2-8 7-12c11-8 18 3 9 12-6 6-16 6-16 6s-10 0-16-6z" fill="#fff7f2"/>
+</svg>

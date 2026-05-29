@@ -1,0 +1,18 @@
+{
+  "name": "心意提醒 HeartGift Web",
+  "short_name": "心意提醒",
+  "description": "本地保存的关系提醒与送礼助手。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f7f8",
+  "theme_color": "#ff5c48",
+  "icons": [
+    {
+      "src": "/assets/heartgift-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
