@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://heartgift.pages.dev/sitemap.xml
+Sitemap: https://heartgift-web.pages.dev/sitemap.xml
