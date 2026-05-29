@@ -1,4 +1,4 @@
-const CACHE_NAME = "heartgift-web-v4";
+const CACHE_NAME = "heartgift-web-v5";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -14,8 +14,15 @@ const STATIC_ASSETS = [
   "/en/privacy.html",
   "/en/guides/",
   "/en/guides/gifts-for-mom-birthday.html",
+  "/en/guides/gifts-for-dad-birthday.html",
   "/en/guides/gifts-for-girlfriend-birthday.html",
+  "/en/guides/gifts-for-boyfriend-birthday.html",
   "/en/guides/anniversary-gift-ideas.html",
+  "/en/guides/teacher-appreciation-gifts.html",
+  "/en/guides/lunar-new-year-visiting-gifts.html",
+  "/en/guides/what-to-bring-when-meeting-parents.html",
+  "/en/guides/gifts-for-elders-to-avoid.html",
+  "/en/guides/thoughtful-gifts-on-a-budget.html",
   "/guides/",
   "/guides/mom-birthday-gifts.html",
   "/guides/dad-birthday-gifts.html",
